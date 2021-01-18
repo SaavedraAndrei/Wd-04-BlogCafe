@@ -1,0 +1,375 @@
+:root {
+  --font-primario: "Open Sans", sans-serif;
+  --font-secundario: "PT Sans", sans-serif;
+}
+
+​ ::placeholder {
+  font-size: 1.5rem;
+  padding: 0rem 1rem;
+}
+
+/**GLOBALES**/
+html {
+  box-sizing: border-box;
+  font-size: 62.5%;
+}
+
+*,
+*:before,
+*after {
+  box-sizing: inherit;
+}
+
+body {
+  font-family: var(--font-secundario);
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: var(--font-primario);
+}
+
+h1 {
+  font-size: 3.8rem;
+}
+
+h2 {
+  font-size: 2.8rem;
+}
+
+h3 {
+  font-size: 1.8rem;
+}
+
+h4 {
+  font-size: 0.8rem;
+}
+
+img {
+  width: 100%;
+}
+
+p {
+  font-size: 2rem;
+  line-height: 3rem;
+}
+
+a {
+  text-decoration: none;
+}
+
+.titulo {
+  font-size: 5rem;
+  margin: 3rem 0rem 2rem 0rem;
+}
+
+.contacto-bg {
+  background-image: url(../img/contacto.jpg);
+  height: 40rem;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center center;
+}
+
+.formulario {
+  background-color: white;
+  margin: -5rem auto 0 auto;
+  width: 85%;
+  padding: 5rem;
+}
+
+.variable {
+  display: flex;
+  margin-bottom: 2rem;
+}
+
+.campo__label {
+  flex: 0 0 9rem;
+  text-align: center;
+  font-size: 1.5rem;
+}
+
+.campo__field {
+  flex: 1;
+  border: 1px solid cornflowerblue;
+  border-radius: 0.5rem;
+}
+
+/************/
+
+/**UTILIDADES**/
+.contenedor {
+  margin: 0 auto;
+  width: min(90%, 120rem);
+}
+
+.centrar-texto {
+  text-align: center;
+}
+/**************/
+
+/**HEADER**/
+.header {
+  background-image: url(../img/banner.webp);
+  background-size: cover;
+  background-position: center center;
+  height: 60rem;
+  margin: 0;
+}
+
+.header__logo {
+  color: white;
+  text-align: center;
+  margin: 0;
+  padding: 4rem 0rem;
+  font-weight: 400;
+}
+
+.header__logo span {
+  font-weight: 900;
+}
+
+.navegacion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.navegacion__enlace {
+  color: white;
+  text-decoration: none;
+  font-size: 2rem;
+  padding: 2rem 100%;
+  font-weight: 700;
+}
+
+.navegacion__enlace:hover {
+  background-color: rgb(131, 103, 39);
+}
+
+.header__title {
+  color: white;
+  text-align: center;
+  padding: 1rem 0.5rem;
+  font-weight: 900;
+  font-size: 3.5rem;
+  line-height: 5rem;
+}
+
+.header__text {
+  color: white;
+  text-align: center;
+  padding: 1rem 0.7rem;
+  font-weight: 700;
+}
+
+@media (min-width: 992px) {
+  .header__barra {
+    display: flex;
+    justify-content: space-between;
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  .navegacion {
+    flex-direction: row;
+  }
+
+  .navegacion__enlace {
+    color: white;
+    text-decoration: none;
+    font-size: 2rem;
+    padding: 2rem;
+    font-weight: 700;
+  }
+
+  .navegacion__enlace:hover {
+    background-color: transparent;
+    color: rgb(131, 103, 39);
+  }
+
+  .header__title {
+    padding: 12rem 0.5rem;
+    font-weight: 900;
+    font-size: 4rem;
+    line-height: 5rem;
+  }
+
+  .header__text {
+    padding: 1rem 0.7rem;
+    font-weight: 400;
+    font-size: 3rem;
+  }
+}
+/**********/
+
+/**MAIN**/
+
+.main__blog {
+  display: grid;
+  grid-template-rows: repeat(3, 1fr);
+  row-gap: 5rem;
+  padding: 1rem;
+}
+
+.main__anuncio h3 {
+  font-size: 2.5rem;
+}
+
+.main__anuncio p {
+  text-align: justify;
+  padding: 1.5rem;
+}
+
+@media (min-width: 992px) {
+  .main__contenido {
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-gap: 4rem;
+    padding: 0rem 1rem;
+    max-width: 115rem;
+    margin: 0 auto;
+  }
+}
+
+.main__tall__cur {
+  display: grid;
+  grid-template-rows: repeat(2, 1fr);
+  padding: 0rem 1rem;
+}
+
+.cursos {
+  margin: 3rem 0rem;
+}
+
+.cursos h3 {
+  font-size: 2.5rem;
+  padding-bottom: 3rem;
+}
+
+.cursos span {
+  font-size: 2rem;
+  font-weight: bolder;
+  padding: 0rem 2rem;
+}
+
+.cursos p {
+  font-size: 2rem;
+  font-family: var(--font-primario);
+  padding-bottom: 3rem;
+}
+
+/**P-CURSOS**/
+@media (min-width: 768px) {
+  .cursos-s {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 4rem;
+    margin: 2rem;
+  }
+
+  .main-p-cursos {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+
+  .cursos-s h3 {
+    font-size: 2.5rem;
+    padding-bottom: 3rem;
+  }
+  .cursos-s span {
+    font-size: 2rem;
+    font-weight: bolder;
+    padding: 0rem 2rem;
+  }
+
+  .cursos-s p {
+    font-size: 2rem;
+    font-family: var(--font-primario);
+    padding-bottom: 3rem;
+  }
+}
+/************/
+
+/**BOTONES**/
+.boton {
+  text-decoration: none;
+  font-size: 2rem;
+  color: white;
+  padding: 1rem 5rem;
+  display: block;
+  text-align: center;
+  font-family: var(--font-primario);
+  font-weight: 700;
+  border: none;
+}
+
+.boton--negro {
+  background-color: rgb(73, 25, 25);
+}
+
+.boton--marron {
+  background-color: rgb(139, 13, 13);
+  width: 60%;
+  margin: 0rem auto;
+}
+/***********/
+/********/
+
+/**FOOTER**/
+.footer {
+  background-color: black;
+  margin-top: 5rem;
+}
+
+/**********/
+
+/**PAG-BLOG**/
+.main__p__blog {
+  padding: 1rem;
+}
+@media (min-width: 992px) {
+  .main__p__blog {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    column-gap: 2rem;
+  }
+}
+
+.main__p__blog img {
+  padding: 2rem 0;
+}
+
+.main__p__blog p {
+  padding: 2rem;
+  text-align: justify;
+  margin: 0 auto;
+}
+
+@media (min-width: 992px) {
+  .main__p__blog {
+    max-width: 100rem;
+    margin: 0 auto;
+  }
+}
+/************/
+
+/**PAG-NOSOTROS**/
+
+@media (min-width: 992px) {
+  .contenido-p {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    width: 100rem;
+  }
+}
+/****************/
+
+/**PAG-CONTACTO**/
+.imagen__contacto {
+  margin: 3rem 0rem;
+}
+
+/****************/
